@@ -1,0 +1,102 @@
+<h1 *ngIf="this.basketProducts.length == 0">В корзине пусто</h1>
+
+<div class="basket-card" *ngFor="let pBasket of basketProducts" id="pBasket.id">
+  <img src="../assets/phone.jpeg" height="200px">
+  <div class="basket-product-info">
+    <h2>{{pBasket.title}}</h2>
+    <h3>{{pBasket.price * this.map.get(pBasket.id)}}</h3>
+  </div>
+  <div class="basket-product-options">
+    <p (click)="deleteFromBasket(pBasket)">Удалить</p><br>
+    <p
+     (click)="moveToWishList(pBasket)">
+     Добавить в список желаний
+    </p>
+  </div>
+  <div class="counter-basket">
+  <input type="text" [value]="this.map.get(pBasket.id)" id="counter-input" readonly>
+  <div id="plus">
+    <img src="../assets/up.png" height="20px" (click)="counterPlus(pBasket)"><br>
+    <img src="../assets/down.png" height="20px" (click)="counterMinus(pBasket)">
+  </div>
+  </div>
+</div>
+
+<!-- Is shown when there are products in basket -->
+<div class="container" *ngIf="this.basketProducts.length != 0">
+
+  <form class="" action="/" method="" #userForm="ngForm" (ngSubmit)=onSubmitted()>
+  
+    <h2>Данные для отправки</h2>
+    <h4>* Данные, обязательные для заполнения</h4>
+  
+  <!-- имя -->
+    <div class="alert" [hidden]="name.pristine || name.valid">
+      <h3>Поле обязательно для заполнения!</h3>
+    </div>
+  
+    <input #name="ngModel" type="text" required [(ngModel)]="this.userData.name" 
+    class="name" name="customerName" placeholder="*Имя" maxlength="15">
+  
+  <!-- Фамилия -->
+    <div class="alert" [hidden]="surname.pristine || surname.valid">
+      <h3>Поле обязательно для заполнения!</h3>
+    </div>
+  
+    <input #surname="ngModel" type="text" required [(ngModel)]="this.userData.surname"
+     class="name" name="customerSurname" placeholder="*Фамилия" maxlength="15">
+  
+  <!-- Отчество -->
+  
+  <div class="alert" [hidden]="patronymic.pristine || patronymic.valid">
+    <h3>Поле обязательно для заполнения!</h3>
+  </div>
+  
+    <input #patronymic="ngModel" type="text" required [(ngModel)]="this.userData.patronymic"
+    class="name" name="customerPatronymic" placeholder="*Отчество" maxlength="15">
+  
+  <!-- Номер -->
+  
+  <div class="alert" [hidden]="number.pristine || number.valid">
+    <h3>Введите корректный номер!</h3>
+  </div>
+  
+    <input #number="ngModel" id="numberId" type="tel" pattern="[0-9]{11}" 
+    required [(ngModel)]="this.userData.number" name="number" class="other-data" 
+    placeholder="*Номер телефона" maxlength="11" minlength="11">
+  
+  <!-- Email -->
+  
+  <div class="other-alert" [hidden]="email.valid || email.pristine">
+    <h3>Формат email: xxx@xxx.xx</h3>
+  </div>
+  
+    <input #email="ngModel" type="email" [(ngModel)]="this.userData.email" 
+    required name="email" class="other-data" placeholder="*email" email>
+  
+  <!-- Адрес -->
+  
+    <div class="alert" [hidden]="address.pristine || address.valid">
+      <h3>Поле обязательно для заполнения!</h3>
+    </div>
+  
+    <input #address="ngModel" id="address" type="text" required [(ngModel)]="this.userData.address" 
+    name="customerAddress" placeholder="*Адрес" maxlength="100">
+  
+  <!-- Комментарий -->
+  
+    <h3>Комментарий</h3>
+    <textarea [(ngModel)]="this.userData.comment" id="comment" 
+    name="customerComment" maxlength="450"></textarea>
+  
+      <button [disabled]="name.invalid || address.invalid || surname.invalid || patronymic.invalid || number.invalid || email.invalid" 
+      type="submit" name="button">Отправить</button>
+  
+  </form>
+  
+  <div class="json-data" *ngIf="this.submit">
+  {{this.userData | json}}
+  </div>
+  
+  
+  </div>

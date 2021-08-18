@@ -1,0 +1,61 @@
+<!-- <div class="flex-container">
+
+    <div class="product-card" *ngFor="let phone of smartphones; let i = index;">
+
+        <app-card
+
+        [product]=phone (selectedProduct)="showModal($event, i)"
+        (wishProduct)="addToWishList($event, i)">
+        
+        </app-card>
+        
+    </div>
+
+</div> -->
+
+<div class="container cards-center">
+
+    <div class="product-card" *ngFor="let phone of smartphones; let i = index;">
+        <app-card [product]=phone 
+            (selectedProduct)="showModal($event, i)"
+            (wishProduct)="addToWishList($event, i)">
+        </app-card>
+    </div>
+
+</div>
+
+<div class="button" (click)="showFilterModal()">
+
+    <p>Фильтр</p>
+
+</div>
+
+<div class="drop-filter" *ngIf="isFilterSwitched">
+
+    <p>Марка</p>
+    <select class="select-class" #select>
+        <option value="Any">Любая</option>
+        <option value="Iphone">Iphone</option>
+        <option value="Samsung">Samsung</option>
+        <option value="YotaPhone">Yotaphone</option>
+    </select>
+    
+    <p>min</p>
+    <input maxlength="6" (keypress)="isNumberCheck($event)" type="text" class="filter-input" #minAmount [value]="minValue">
+    <p>max</p>
+    <input maxlength="6" (keypress)="isNumberCheck($event)" type="text" class="filter-input" #maxAmount value="{{maxValue}}"><br>
+
+    <button (click)="submitChanges(minAmount.value, maxAmount.value, select.value)">Применить</button><br>
+    <button (click)="resetFilter()">Сбросить</button>
+
+</div>
+
+
+<app-modal-window></app-modal-window>
+
+<!-- 
+<mat-sidenav-container id="sidenav">
+   <mat-sidenav-content>
+       <h1>fuck</h1>
+   </mat-sidenav-content>
+</mat-sidenav-container> -->

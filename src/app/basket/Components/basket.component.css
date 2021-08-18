@@ -1,0 +1,155 @@
+.basket-card {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  z-index: 1;
+  position: relative;
+  margin-top: 10px;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  height: 220px;
+  /* padding: 25px; */
+}
+
+.basket-card h2 {
+  font-size: 1.5em;
+}
+
+.basket-card h3 {
+  font-size: 1.17em;
+}
+
+.basket-card img {
+  float: left;
+}
+
+.basket-product-options {
+  margin-top: 50px;
+}
+
+.basket-product-options p {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 0;
+}
+
+#counter-input {
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  margin-top: 5px;
+}
+
+#plus {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+
+#plus img {
+	padding: 0;
+	margin: 0;
+	margin-left: 6px;
+	cursor: pointer;
+}
+
+.counter-basket {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  bottom: 45%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15%;
+  color: rgba(105, 105, 105, 0.5);
+}
+
+/* Forms styles */
+
+.container {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2em;
+}
+
+.container h2 {
+  font-size: 1.5em;
+}
+
+.container h3 {
+  font-size: 1.17em;
+}
+
+input {
+  display: block;
+  margin: 1% auto;
+}
+
+.name {
+  height: 30px;
+  text-align: center;
+}
+
+.other-data {
+  height: 30px;
+  text-align: center;
+}
+
+#number-id {
+  margin-top: 3%;
+}
+
+#address {
+  margin-top: 3%;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 3%;
+}
+
+#comment {
+  resize: none;
+  width: 400px;
+  height: 200px;
+}
+
+button {
+  display: block;
+  margin: 1% auto;
+  width: 200px;
+  background-color: #DCDCDC;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.alert {
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 350px;
+  background-color: rgba(205, 92, 92, 0.5);
+  border-radius: 5px;
+  margin-bottom: -1%;
+}
+
+.other-alert {
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 350px;
+  background-color: rgba(205, 92, 92, 0.5);
+  border-radius: 5px;
+  margin-bottom: -1%;
+}

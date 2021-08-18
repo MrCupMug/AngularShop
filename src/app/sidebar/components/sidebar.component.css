@@ -1,0 +1,47 @@
+#sidebar {
+    padding-top: 50px;
+    z-index: 2;
+    width: 370px;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid grey;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  #sidebar-cross-img {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  
+  #sidebar-prods {
+    margin-top: 10px;
+  }
+  
+  #sidebar h2 {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .inner-drop-list {
+    height: 70px;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .inner-drop-list h4 {
+    float: right;
+  }
+  
+  .inner-drop-list img, h3 {
+    float: left;
+    display: inline-block;
+    margin-right: 20px;
+  }

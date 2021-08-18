@@ -1,0 +1,36 @@
+<div class="modal-window-wrapper" *ngIf="isSwitched">
+
+	<div class="modal-window">
+	  <div class="close" (click)="hideModal()">
+	    <img src="../assets/cross.png" height="20px">
+	  </div>
+	  <div class="upper-text">
+	    <h2>Добавить в корзину</h2>
+	  </div>
+	  <div class="product-main-info">
+	    <img src="../assets/phone.jpeg" height="200px">
+	    <div class="left-info">
+	      <h3>{{phone.title}}</h3>
+	      <h3>Кол-во:</h3>
+	      <h3>Сумма:</h3>
+	    </div>
+	    <div class="right-info">
+	      <div class="counter">
+	      	<input type="text" value="{{productCounter}}" id="counter-input" readonly>
+					<div id="plus">
+						<img src="../assets/up.png" height="17px" (click)="counterPlus()"><br>
+						<img id="img-down" src="../assets/down.png" height="17px" (click)="counterMinus()">
+					</div>
+	      </div>
+	      <h3>{{phone.price * productCounter}}</h3>
+	    </div>
+	  </div>
+	  <div class="add-button" (click)="addToBasket()">
+	    <div class="button" >
+				<img src="../assets/basketModal.png" height="50px">
+	      <h2>Добавить</h2>
+	    </div>
+	  </div>
+	</div>
+
+</div>

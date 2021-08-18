@@ -1,0 +1,50 @@
+<!-- The only component related to top-bar -->
+<header>
+        <ul id="ul-menu">
+            
+            <li routerLink="/" class="left-item" id="border-right">
+              <img id="home-img" src="../assets/home.png" height="24px">
+            </li>
+            
+            <div class="right-item" id="goods-counter">
+
+              <p><b>{{totalPrice}} рублей</b></p>
+              
+            </div>
+            <li routerLink="/basket" class="right-item"><img id="basket-icon" class="icons-menu" src="../assets/basket.png">
+              <span class="position-relative top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                {{totalAmount}}
+                <span class="visually-hidden">unread messages</span>
+              </span></li>
+
+            <li appSidebar class="right-item"><img id="wish-icon" 
+              class="icons-menu" src="../assets/wishList.png">
+              <span class="position-relative top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                {{goodsInWishList}}
+                <span class="visually-hidden">unread messages</span>
+              </span></li>
+        </ul>
+        
+</header>
+
+<app-sidebar>
+  <div id="sidebar-prods" *ngFor="let dropProd of goodsInDropList" class="inner-drop-list">
+    <img src="../assets/phone.jpeg" height="60px">
+    <h3>{{dropProd.title}}</h3>
+    <h4>{{dropProd.date}}</h4>
+  </div>
+</app-sidebar>
+
+ <!-- <div *ngIf="isSideBarShown" id="sidebar">
+
+  <img id="sidebar-cross-img" (click)="hideSideBar()" src="../assets/sidebar-cross.png" height="15" alt="">
+
+  <div id="sidebar-prods" *ngFor="let dropProd of goodsInDropList" class="inner-drop-list">
+    <img src="../assets/phone.jpeg" height="60px">
+    <h3>{{dropProd.title}}</h3>
+    <h4>{{dropProd.date}}</h4>
+  </div>
+
+  <h2 (click)="hideSideBar()" routerLink="/wish-list">Смотреть все</h2>
+
+</div> -->

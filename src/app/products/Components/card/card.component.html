@@ -1,0 +1,22 @@
+<div class="card-container">
+
+<img src="{{product.imgUrl}}" height="200px">
+	
+<h3>{{product.title}}</h3>
+<h4>{{product.price}}</h4>
+
+<button type="button" class="to-basket-button" (click)="selectBasketProduct(product)">
+
+	<img src="../assets/basket.png">
+	<p>В корзину</p>
+
+</button>
+
+<button (click)="selectWishProduct(product)" class="to-wish-list-button">
+
+	<img src="../assets/wishList.png">
+
+</button>
+
+</div>
+

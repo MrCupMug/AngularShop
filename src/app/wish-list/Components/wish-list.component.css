@@ -1,0 +1,47 @@
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+.wish-list-product {
+  margin-top: 10px;
+  height: 250px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+img {
+  display: inline-block;
+  margin: 25px;
+  float: left;
+}
+
+.wish-list-product-info {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.wish-list-product-options {
+  display: block;
+  margin: auto;
+}
+
+.wish-list-product-options p {
+  padding: 0;
+  margin: 15px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15%;
+  color: rgba(105, 105, 105, 0.5);
+}

@@ -1,0 +1,6 @@
+<div id="sidebar" *ngIf="isSideBarShown">
+    <img (click)="hideSideBar()" id="sidebar-cross-img" src="../assets/sidebar-cross.png" height="15" alt="">
+    <ng-content></ng-content>
+    <h2 (click)="hideSideBar()" routerLink="/wish-list">Смотреть все</h2>
+</div>
+  

@@ -1,0 +1,16 @@
+<h1 *ngIf="this.wishListProduct.length == 0">В списке желаний пусто</h1>
+
+<!-- Container for cards in wish-list -->
+<div *ngFor="let elem of wishListProduct" class="wish-list-product" id="{{elem.id}}">
+  <img src="{{elem.imgUrl}}" height="200px">
+  <div class="wish-list-product-info">
+    <h2>{{elem.title}}</h2>
+    <h3>{{elem.price}}</h3>
+  </div>
+  <div class="wish-list-product-options">
+    <p (click)="deleteprods(elem)">Удалить</p><br>
+    <p (click)="showModal(elem)">В корзину</p>
+  </div>
+</div>
+
+<app-modal-window></app-modal-window>

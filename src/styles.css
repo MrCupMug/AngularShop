@@ -1,0 +1,22 @@
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+
+app-root {
+  width: 100%;
+}
+
+html {
+	min-width: 850px;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

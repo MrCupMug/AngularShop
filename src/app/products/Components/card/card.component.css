@@ -1,0 +1,42 @@
+.card-container {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.to-basket-button {
+	background-color: #DCDCDC;
+	border-radius: 10px;
+	display: inline-block;
+	float: left;
+	border: none;
+	height: 40px;
+	width: 140px;
+	cursor: pointer;
+}
+
+.to-basket-button:hover {
+	background-color: #C0C0C0
+}
+
+.to-basket-button img {
+	display: inline-block;
+}
+
+.to-basket-button p {
+	display: inline-block;
+	margin: 0;
+}
+
+.to-wish-list-button {
+	background-color: #DCDCDC;
+	display: inline-block;
+	border-radius: 10px;
+	border: none;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}
+
+.to-wish-list-button:hover {
+	background-color: #C0C0C0
+}

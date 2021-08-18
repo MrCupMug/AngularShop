@@ -1,0 +1,98 @@
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.cards-center {
+	text-align: center;
+}
+
+.product-card {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	display: inline-block;
+	margin: 20px 3.5%;
+	text-align: center;
+}
+
+.product-card h3 {
+	margin: 10px 0;
+}
+
+.button {
+	position: fixed;
+	bottom: 20px;
+	left: 30px;
+	margin: 10px;
+	background-color: #DCDCDC;
+	border-radius: 10px;
+	display: inline-block;
+	height: 40px;
+	width: 140px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button p {
+	margin-top: 7px;
+}
+
+.button:hover {
+	background-color: #C0C0C0;
+}
+
+/* Filter styles */
+
+.drop-filter {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	/* font-weight: normal; */
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 80px;
+	left: 10px;
+	width: 200px;
+	height: 250px;
+	background-color: rgba(117, 111, 107, 0.1);
+	border-radius: 10px;
+}
+
+.drop-filter p {
+	margin: 0;
+}
+
+.drop-filter input {
+	text-align: center;
+	/* margin-bottom: 10px; */
+	width: 100px;
+	height: 25px;
+}
+
+.drop-filter button {
+	padding: 10px;
+	line-height: 0px;
+	height: 25px;
+	margin-top: 15px;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	background-color: #DCDCDC;;
+}
+
+.drop-filter button:hover {
+	background-color: #C0C0C0;
+}
+
+.select-class {
+	margin: 5px 10px;
+}
+
+#sidenav {
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
